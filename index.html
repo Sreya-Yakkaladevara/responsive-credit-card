@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive credit card</title>
+    <link rel="stylesheet" href="card.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-1">
+             <div class="detail">
+                <p></p>
+                <div id="cardnum-display">0000 0000 0000 0000</div>
+        
+                <div id="holdername-display">JANE APPLESSED</div>
+                <div id="month">
+                    <div id="mm-display">01</div>/
+                    <div id="yy-display">02</div>
+                </div>
+             </div>
+             <div class="card2">
+                <p></p>
+                <h1 id="cvc-display">012</h1>
+            </div>
+
+        </div>
+        <div class="col-2 ">
+            <form action="">
+                <div class="cardholder">          
+                    <label>CARDHOLDER NAME</label><br>
+                    <input id="holder" type="text" placeholder="e.g,JANE APPLESSED" required><br>
+                    <small id="error-holder"></small>
+                </div>
+                <div class="num">
+                    <label>CARD NUMBER</label><br>
+                    <input id="num" type="text" placeholder="e.g.1234 5678 9123 0000" required><br>
+                    <small id="error-num"></small>
+                </div>
+                <label class="da">EXP.DATE[MM/YY]</label>
+                <div class="ss">
+                 
+                    <div class="date">
+                        <div class="month">
+                            <input id="mm" type="number" placeholder="MM"><br>
+                            <small id="error-month"></small>
+                        </div>
+                        <div class="year">
+                            <input  id="yy" type="number" placeholder="YY"><br>
+                            <small id="error-year"></small>
+                        </div>
+                    </div>
+
+                    <div class="cvc">
+                        <label>CVC</label>
+
+                        <input id="cvc" type="number" placeholder="e.g,123">
+                        <small id="error-cvc"></small>
+
+                    </div>
+                </div>
+                <button id="button" type="submit">confirm</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="popup ">
+           <div class="content hide">
+                <i class='bx bx-check'></i>
+                <h1>THANK YOU</h1>
+                <p>we`ve added your card details</p>
+                <button id="btn">continue</button>
+           </div>
+    </div>
+    
+    <script src="card.js"></script>
+</body>
+</html>
